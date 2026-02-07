@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #667eea, #764ba2);
+}
+
+/* Card */
+.auth-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  width: 340px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.7s ease;
+}
+
+/* Brand */
+.auth-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-title h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.auth-title span {
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Inputs */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Password toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #667eea;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Errors */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Screen-reader only */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Password strength */
+.pw-strength {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #555;
+}
+.pw-strength.Weak { color: #d9534f; }
+.pw-strength.Medium { color: #f0ad4e; }
+.pw-strength.Strong { color: #5cb85c; }
+
+/* Button */
+.auth-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Switch text */
+.auth-switch {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-switch span {
+  color: #667eea;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
